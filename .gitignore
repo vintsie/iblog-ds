@@ -1,5 +1,5 @@
 *.class
-iblog_ds.iml
+iblog-ds.iml
 target/
 
 # Package Files #
