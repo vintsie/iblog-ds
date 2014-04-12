@@ -28,6 +28,7 @@ public interface StaticDataDAO {
 
     /**
      * 新增配置数据
+     * @param dataGroup 数据类型分组
      * @param dataType  数据类型
      * @param dataValue 数据值
      * @throws Exception

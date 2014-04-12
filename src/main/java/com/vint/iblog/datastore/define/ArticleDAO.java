@@ -1,5 +1,7 @@
 package com.vint.iblog.datastore.define;
 
+import org.vint.iblog.common.bean.nor.CBNArticle;
+
 /**
  * 博文持久层接口
  *
@@ -21,8 +23,18 @@ public interface ArticleDAO {
      *
      * @param title  博文标题
      * @param writer 作者
+     * @param content   content
+     * @param blogSeq   文章序号
      * @return 博文的编号，暂定8位16进制字符串
      * @throws Exception
      */
-    public String postNewArticle(String title, String writer, String blogSeq) throws Exception;
+    public String postNewArticle(String title, String content, String writer, String blogSeq) throws Exception;
+
+    /**
+     * 获取文章对象
+     * @param hCode 文章的唯一标识
+     * @return  CBN对象
+     * @throws Exception
+     */
+    public CBNArticle getArticle(String hCode) throws Exception;
 }
