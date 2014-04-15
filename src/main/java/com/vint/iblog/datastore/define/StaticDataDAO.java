@@ -28,12 +28,11 @@ public interface StaticDataDAO {
 
     /**
      * 新增配置数据
-     * @param dataGroup 数据类型分组
      * @param dataType  数据类型
      * @param dataValue 数据值
      * @throws Exception
      */
-    public void newStaticData(String dataType, String dataValue) throws Exception;
+    public void newStaticData(String dataType, String dataValue, int sort) throws Exception;
 
     /**
      * 失效配置数据。dataType必传，dataValue可以为空。如果dataValue为空，
