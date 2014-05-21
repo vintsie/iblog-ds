@@ -12,6 +12,12 @@ import java.util.List;
 public interface ArticleDAO {
 
     /**
+     * 删除Article
+     * @param hCode 16进制字符，文章的唯一标识
+     * @throws Exception
+     */
+    public void deleteArticle(String hCode) throws Exception;
+    /**
      * 获取文章对象
      * @param hCode 文章的唯一标识
      * @return  CBN对象
@@ -19,6 +25,13 @@ public interface ArticleDAO {
      */
     public CBNArticle getArticle(String hCode) throws Exception;
 
+    /**
+     * 根据文章标题和文章仓库信息查询信息
+     * @param title     标题
+     * @param repoInfo  repoInfo
+     * @return  {@link org.vint.iblog.common.bean.nor.CBNArticle}
+     * @throws Exception
+     */
     public CBNArticle getArticle(String title, String repoInfo) throws Exception;
     /**
      * 分页查询文章
