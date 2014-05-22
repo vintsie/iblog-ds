@@ -22,4 +22,6 @@ public interface CommonDAO {
     public void saveGitHubCatalog(String owner, String repo, String path, String type) throws Exception;
 
     public List<CBNGitHubCatalog> getGitHubCatalogs() throws Exception;
+
+    public void initGoogleDs() throws Exception;
 }
